@@ -1,10 +1,10 @@
 [general]
-name=NuPrGvtres
+name=NuPrGv3
 version=0.0.1
 author=Odycloud
-email=arturo@odyhpc.com
+email=support@odyhpc.com
 description=GUI for Numerical Predictions on Graviton3
-about=NuPrGvtres
+about=NuPrGv3
 
 homepage=https://odyhpc.com
 ###repository=https://odyhpc.com
