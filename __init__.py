@@ -10,7 +10,7 @@ def classFactory(iface):
     """
     from mainPlugin import QGISPlugin  
     title = iface.mainWindow().windowTitle()
-    new_title = title.replace('QGIS', 'GUI for Numerical Predictions on Graviton3')
+    new_title = title.replace('QGIS', 'GUI for Numerical Predictions in the public cloud (Graviton3)')
     iface.mainWindow().setWindowTitle(new_title)
 # menus    
     vector_menu = iface.vectorMenu()
