@@ -12,6 +12,17 @@ def classFactory(iface):
     title = iface.mainWindow().windowTitle()
     new_title = title.replace('QGIS', 'GUI for Numerical Predictions in the public cloud (Graviton3)')
     iface.mainWindow().setWindowTitle(new_title)
+    
+# CHECKING CPU
+    lscpu_nomen = ((subprocess.check_output("lscpu", shell=True).strip()).decode())
+    for item in lscpu_nomen.split("\n"):
+        if "Model name" in item:
+        aaa = item.strip()
+    bbb = aaa.replace("Model name:","")    
+    cpu_nomen = bbb.replace(" ","")    
+    texto = "CPU: "+cpu_nomen
+    iface.mainWindow().statusBar().showMessage(texto)
+    
 # menus    
     vector_menu = iface.vectorMenu()
     raster_menu = iface.rasterMenu()
