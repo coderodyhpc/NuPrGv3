@@ -2,6 +2,7 @@
 # Copyright (c) Odycloud.
 
 import sys
+import subprocess
 sys.path.insert(1,'/opt/.Odycloud/Ody_NumPre')
 sys.path.insert(1,'/opt/.Odycloud/Ody_NumPre/GUI')
 
