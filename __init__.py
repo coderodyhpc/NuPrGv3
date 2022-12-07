@@ -17,7 +17,7 @@ def classFactory(iface):
     lscpu_nomen = ((subprocess.check_output("lscpu", shell=True).strip()).decode())
     for item in lscpu_nomen.split("\n"):
         if "Model name" in item:
-        aaa = item.strip()
+            aaa = item.strip()
     bbb = aaa.replace("Model name:","")    
     cpu_nomen = bbb.replace(" ","")    
     texto = "CPU: "+cpu_nomen
