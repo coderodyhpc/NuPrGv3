@@ -19,6 +19,9 @@ def classFactory(iface):
     new_title = title.replace('QGIS', 'Gv3 Graphical Interface')
     iface.mainWindow().setWindowTitle(new_title)
 
+    odyicon = QIcon("/opt/.Odycloud/Ody_NumPre/icongray32.png")
+    iface.mainWindow().setWindowIcon(odyicon)
+
     iface.mainWindow().statusBar().setFont(QFont('Verdana', 10))  
     iface.mainWindow().statusBar().setStyleSheet("background-color:#4B555C; color: white;")  
     command1 = ['ec2metadata', '--instance-id']
