@@ -19,7 +19,7 @@ def classFactory(iface):
     new_title = title.replace('QGIS', 'Gv3 Graphical Interface')
     iface.mainWindow().setWindowTitle(new_title)
 
-    odyicon = QIcon("/opt/.Odycloud/Ody_NumPre/iconlightgray32.png")
+    odyicon = QIcon("/opt/.Odycloud/Ody_NumPre/iconmixed32.png")
     iface.mainWindow().setWindowIcon(odyicon)
 
     iface.mainWindow().statusBar().setFont(QFont('Verdana', 10))  
