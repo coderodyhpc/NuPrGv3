@@ -37,18 +37,27 @@ def classFactory(iface):
     EC2_ZONEx = proc3.communicate()[0].decode("utf-8")
     EC2_ZONE = EC2_ZONEx.strip() 
     
-    lscpu_nomen = ((subprocess.check_output("lscpu", shell=True).strip()).decode())
-    for item in lscpu_nomen.split("\n"):
-        if "Model name" in item:
-            modeln_1 = item.strip()
-    modeln_2 = modeln_1.replace("Model name:","")    
-    cpu_nomen = modeln_2.replace(" ","")  
-    if cpu_nomen == 'Neoverse-N1':
+#    lscpu_nomen = ((subprocess.check_output("lscpu", shell=True).strip()).decode())
+#    for item in lscpu_nomen.split("\n"):
+#        if "Model name" in item:
+#            modeln_1 = item.strip()
+#    modeln_2 = modeln_1.replace("Model name:","")    
+#    cpu_nomen = modeln_2.replace(" ","")  
+    preins = EC2_INSTANCE_TYPE[:3]
+    if preins == 't4g':
         nomen2 = "Graviton2"
-    elif cpu_nomen == '1':
+    elif preins == 'c6g':
+        nomen2 = "Graviton2"
+    elif preins == 'm6g':
+        nomen2 = "Graviton2"
+    elif preins == 'r6g':
+        nomen2 = "Graviton2"
+    elif preins == 'c7g':
         nomen2 = "Graviton3"
     else:    
-        nomen2 = cpu-nomen
+        nomen2 = 'Unknown processor'
+        
+        
     cpu_NM = "CPU: "+nomen2+"\n"
     cpu_NM2 = EC2_INSTANCE_TYPE
 #    cpu_NM2.replace("\n","")
